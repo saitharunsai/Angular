@@ -1,0 +1,16 @@
+<div class="container">
+  <div id="id" class="card">
+    <div id="id" class="card-header" *ngFor="let Post of Posts">
+      {{ Post.title }}
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{ Post.body }}</p>
+          <footer class="blockquote-footer">
+            {{ Post.author }}
+            <cite title="Source Title">{{ Post.related }}</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>

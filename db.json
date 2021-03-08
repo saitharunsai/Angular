@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "title": "How to setup Redux with React (2020)",
+      "body": "Redux is probably the most popular global state management library for react by far. It eliminates the problem of prop-drilling and lets us manage the application state in a scalable",
+      "author": "saitharunsai",
+      "related": "React",
+      "time": "2021/2/25",
+      "id": 1
+    },
+ 
+    {
+      "title": "My new POstMy new POstMy new POstMy new POstMy new POstMy new POst",
+      "body": "fasfasfasfasfasfasfasf",
+      "author": "sfaasfasfasfafafasfasfas",
+      "related": "asfasfasfasfasfasfas",
+      "time": "2021-02-25",
+      "id": 2
+    },
+    {
+      "title": "My new POstMy new POstMy new POstMy new POstMy new POst",
+      "body": "asfasfasfasfasfasfasfasdasdasfdgdfggd",
+      "author": "saitharunsai",
+      "related": "fsafasfasfasfasfasdasdas",
+      "time": "2021-02-25",
+      "id": 3
+    },
+    {
+      "title": "My new POstMy new POstMy new POstMy new POst",
+      "body": "dasdasdasdasdasdasdasda",
+      "author": "saitharunsai",
+      "related": "asdtsdajkdad",
+      "time": "2021-02-25",
+      "id": 4
+    },
+    {
+      "title": "My new POstMy new POstMy new POst",
+      "body": "dasdasdasdasdadasdasdas",
+      "author": "saitharunsai",
+      "related": "asdasdasdasdas",
+      "time": "2021/2/25",
+      "id": 5
+    },
+    {
+      "title": "My new POst",
+      "body": "My new POstMy new POstMy new POstMy new POstMy new POstMy new POstMy new POstMy new POstMy new POst",
+      "author": "Saitharun sai ",
+      "related": "My new POst",
+      "time": "2021/2/25",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "title": "json-server",
+      "related": "adasdas",
+      "author": "typicode",
+      "body": "asvfsfusfsfasfasfasfasfaf",
+      "time": "2021-02-25"
+    },
+    {
+      "title": "My new POstMy new POstMy new POstMy new POstMy new POstMy new POst",
+      "body": "fasfasfasfasfasfasfasf",
+      "author": "sfaasfasfasfafafasfasfas",
+      "related": "asfasfasfasfasfasfas",
+      "time": "2021-02-25",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

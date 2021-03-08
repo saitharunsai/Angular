@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th *ngFor="let col of columns" scope="col">
+          {{ col }}
+        </th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Post of Posts">
+        <td *ngFor="let col of index">{{ Post[col] }}</td>
+        <td>
+          <div class="btn-group">
+            <button id="btn" type="button" class="btn btn-primary btn-space">
+              Edit
+            </button>
+            <button id="btn" type="button" class="btn btn-secondary btn-space ">
+              Update
+            </button>
+            <button id="btn" type="button" class="btn btn-danger btn-space ">
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
