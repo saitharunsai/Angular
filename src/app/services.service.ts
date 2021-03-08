@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {Post} from '../app/home/Post'
 @Injectable({ providedIn: 'root' })
 export class LoginSeviceService {
-  apiurl = "https://truly-contacts.herokuapp.com/api"
+  apiurl = "https://https://saitharun.herokuapp.com/api"
   posturl="http://localhost:4000"
 
   constructor(private httpClient: HttpClient) {}
