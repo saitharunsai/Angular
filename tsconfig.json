@@ -6,7 +6,6 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false ,
     "sourceMap": true,
@@ -17,6 +16,12 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
+    "noImplicitReturns": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
     "lib": [
       "es2018",
       "dom"

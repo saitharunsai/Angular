@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../home/Post';
 import { LoginSeviceService } from '../services.service';
+import { Router} from '@angular/router';
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -9,10 +12,11 @@ import { LoginSeviceService } from '../services.service';
 })
 export class DashboardComponent implements OnInit {
 
-  columns = ["User Id","title","body", "related", "author", "time"];
-  index = ["id", "title", "body", "related", "author", "time"];
-  Posts : Post[] = [];
-  constructor(private rs : LoginSeviceService) { 
+  // columns = ["User Id","title","body", "related", "author", "time"];
+  // index = ["id", "title", "body", "related", "author", "time"];
+  Posts: any ={};
+  search = '';
+  constructor(private rs : LoginSeviceService,private router: Router) { 
     
   }
   ngOnInit(): void {
@@ -25,6 +29,24 @@ export class DashboardComponent implements OnInit {
       (error) => console.log(error)
     
     )
+
+    
   }
+z
+  deleteDetails(item: any) {
+    // if(confirm("Are you sure to delete ")) {
+    //   console.log("Implement delete functionality here");
+    // }
+    this.Posts.splice(item - 1, 1);
+    this.rs.deleteDetails(item).subscribe((result) => {
+      console.warn('result', result);
+    });
+  }
+
+
+  Add(){
+    this.router.navigate(['/Add']);
+  }
+
 
 }

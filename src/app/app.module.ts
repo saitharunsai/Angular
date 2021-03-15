@@ -18,6 +18,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { UpdatePostComponent } from './update-post/update-post.component'
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { UpdatePostComponent } from './update-post/update-post.component'
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
     ToastrModule.forRoot({
       timeOut: 10000,
       positionClass: 'toast-top-right',

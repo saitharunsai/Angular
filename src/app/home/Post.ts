@@ -1,4 +1,4 @@
-export class Post
+export interface Post
 {
     id:any;
     title:any;
@@ -6,13 +6,5 @@ export class Post
     related:any;
     author:any;
     time:any;
-    constructor(id,body, related, author, title, time)
-    {
-        this.id = id;
-        this.time = time;
-        this.body = body;
-        this.related = related;
-        this.author = author;
-        this.title = title;
-    }
+
 }

@@ -2,24 +2,61 @@
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th *ngFor="let col of columns" scope="col">
-          {{ col }}
+        <th>
+          <button class="ui inverted red button" (click)="Add()">
+            Add Post
+          </button>
         </th>
-        <th>Actions</th>
+        <th>
+          <div class="ui category search">
+            <div class="ui icon input">
+              <input
+                class="prompt"
+                [(ngModel)]="search"
+                type="text"
+                [(ngModel)]="search"
+                placeholder="Search "
+              />
+              <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th scope="col"></th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Related</th>
+        <th>Author</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let Post of Posts">
-        <td *ngFor="let col of index">{{ Post[col] }}</td>
+      <tr *ngFor="let Post of Posts | filter: search">
+        <td>{{ Post.id }}</td>
+        <td>{{ Post.title }}</td>
+        <td>{{ Post.body }}</td>
+        <td>{{ Post.related }}</td>
+        <td>{{ Post.author }}</td>
+        <td>{{ Post.author }}</td>
         <td>
           <div class="btn-group">
-            <button id="btn" type="button" class="btn btn-primary btn-space">
-              Edit
-            </button>
-            <button id="btn" type="button" class="btn btn-secondary btn-space ">
+            <button
+              id="btn"
+              type="button"
+              routerLink="/update/{{ Post.id }}"
+              class="btn btn-secondary btn-space "
+            >
               Update
             </button>
-            <button id="btn" type="button" class="btn btn-danger btn-space ">
+            <button
+              id="btn"
+              type="button"
+              (click)="deleteDetails(Post.id)"
+              class="btn btn-danger btn-space "
+            >
               Delete
             </button>
           </div>
