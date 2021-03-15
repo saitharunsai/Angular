@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
     private Login: LoginSeviceService,
     private router :Router
     
+    
   ) {}
 
   ngOnInit() {
