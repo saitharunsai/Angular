@@ -1,19 +1,19 @@
 <div class="container">
-  <table class="table">
-    <thead class="thead-dark">
-      <tr></tr>
-
-      <button class="ui inverted red button" (click)="Add()">
+   <div class="search-form-wrapper">
+    <button class="ui inverted red button" (click)="Add()">
         Add Post
       </button>
 
       <div class="ui right aligned category search">
         <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Search animals..." />
+          <input class="prompt" type="text" [(ngModel)]="search" placeholder="Search the content" />
           <i class="search icon"></i>
         </div>
         <div class="results"></div>
       </div>
+    </div>
+  <table class="table">
+    <thead class="thead-dark">
 
       <tr>
         <th scope="col"></th>

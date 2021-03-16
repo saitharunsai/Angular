@@ -47,14 +47,14 @@ export class LoginComponent implements OnInit {
     // }
 
 
-
   collect() {
     this.submitted = true;
 
     if (this.LoginFrom.invalid) {
       return;
     }
-    this.Login.saveDetails(this.LoginFrom.value).subscribe((result:any) => {
+    this.Login.saveDetails(this.LoginFrom.value)
+    .subscribe((result:any) => {
       this.isLogin = true;
       this.userdetails = result
       this.token=result.token;

@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
     
   }
   ngOnInit(): void {
+  
     this.rs.PostDetails().subscribe
     (
       (response)=>
@@ -29,7 +30,7 @@ export class DashboardComponent implements OnInit {
       (error) => console.log(error)
     
     )
-
+ 
     
   }
 z

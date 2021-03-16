@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,29 +9,31 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'mytask';
-loggedIn =localStorage.getItem('STATE')
-loggedout=localStorage.getItem('STATE')
-nav1 =false
-nav2 =true
-  constructor(   private router :Router) {}
-  ngOnInit(): void {
-   console.log("appcompoennet")
-  if(this.loggedIn === 'true'){
-    this.nav1 =true
-    this.nav2=false
-  }
-  else if(this.loggedout === '') {
-    this.nav2=true
-    this.nav1=false
-
-  }
-   else {
-      this.router.navigate(['/login'])
+  loggedIn: boolean = false;
+  constructor(private router: Router,    private toastr: ToastrService,) {}
+ 
+  ngAfterViewChecked(): void {
+    console.log('appcompoennet');
+    if (localStorage.getItem('STATE') == 'true') {
+      console.log('treuhjke');
+      this.loggedIn = true;
+    } else {
+      this.loggedIn=false
+      console.log('faslkld');
+   
     }
+  
+  }
+  logouttoast() {
+    this.toastr.warning('Sucessfully Logged OUT 😀  ');
+  }
+  logout() {
+    // location.search
+    this.logouttoast()
+    localStorage.clear();
+    this.router.navigate(['/']);
   }
 
-  logout(){
-    localStorage.clear()
-    this.router.navigate(['/login'])
-  }
+ 
+ 
 }
