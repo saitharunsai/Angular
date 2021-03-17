@@ -9,7 +9,7 @@ import {Post} from '../app/home/Post'
 @Injectable({ providedIn: 'root' })
 export class LoginSeviceService {
   apiurl = "https://truly-contacts.herokuapp.com/api"
-  posturl="http://localhost:4000"
+  posturl="https://my-json-server.typicode.com/saitharunsai/json"
   isLogin = false;
   constructor(private httpClient: HttpClient,    private toastr: ToastrService) {}
   handleError(error: HttpErrorResponse) {
