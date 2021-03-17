@@ -43,12 +43,12 @@ export class LoginSeviceService {
   Addpost(data: any) {
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(data);
-    console.log(body)
+    // console.log(body)
     return this.httpClient.post(this.posturl + '/posts', body,{'headers':headers}).pipe(catchError(this.handleError));
   }
   isLoggedIn() {
     const loggedIn = localStorage.getItem('STATE');
-    console.log(loggedIn)
+    // console.log(loggedIn)
     if (loggedIn == 'true')
       this.isLogin = true;
     else

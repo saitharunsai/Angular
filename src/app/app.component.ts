@@ -13,13 +13,13 @@ export class AppComponent {
   constructor(private router: Router,    private toastr: ToastrService,) {}
  
   ngAfterViewChecked(): void {
-    console.log('appcompoennet');
+    // console.log('appcompoennet');
     if (localStorage.getItem('STATE') == 'true') {
-      console.log('treuhjke');
+      // console.log('treuhjke');
       this.loggedIn = true;
     } else {
       this.loggedIn=false
-      console.log('faslkld');
+      // console.log('faslkld');
    
     }
   

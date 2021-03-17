@@ -25,7 +25,7 @@ export class UpdatePostComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.router.snapshot.params.id)
     this.service.getCurrentDetails(this.router.snapshot.params.id).subscribe((result:any)=>{
-     console.log("======result",result)
+    //  console.log("======result",result)
      this.editDetails = new FormGroup({
       title: new FormControl(result.title),
       body: new FormControl(result.body),
@@ -39,7 +39,7 @@ export class UpdatePostComponent implements OnInit {
       this.toastr.info('Sucessfully Updated 😀  ');
     }
    update(){
-     console.log("item",this.editDetails.value)
+    //  console.log("item",this.editDetails.value)
      this.service.updateDetails(this.router.snapshot.params.id,this.editDetails.value).subscribe((result)=>{
        console.warn("result",result)
        this.showSuccess();

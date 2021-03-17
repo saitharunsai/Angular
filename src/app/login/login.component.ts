@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
       this.isLogin = true;
       this.userdetails = result
       this.token=result.token;
-      console.log("=====logged in",this.isLogin)
+      // console.log("=====logged in",this.isLogin)
       localStorage.setItem('STATE',"true");
       localStorage.setItem('userdetails', JSON.stringify(this.userdetails));
       localStorage.setItem('token',this.token);
